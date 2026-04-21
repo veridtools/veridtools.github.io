@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./verid-logo.webp" width="75" alt="Veridtools Logo" /> <p>veridtools.github.io</p></h1>
 
-Source for <a href="https://docs.verid.tools">docs.verid.tools</a> — the Veridtools open source hub.</br>
+Source for <a href="https://docs.verid.tools">docs.verid.tools</a> — the Verid open source hub.</br>
 A single static page. No build step, no dependencies, no framework.
 
 ## Files
