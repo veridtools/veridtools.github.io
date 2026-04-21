@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veridtools — TypeScript-native DMN tooling</title>
+  <meta name="description" content="Open source TypeScript tooling for DMN — the OMG standard for modeling business decisions." />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      const saved = localStorage.getItem("vt-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</head>
+<body>
+<div class="page">
 
+  <!-- Banner -->
+  <header class="banner">
+    <div class="banner-top">
+      <div class="theme-toggle" role="group" aria-label="Color theme">
+        <button class="theme-btn" id="btn-dark" aria-pressed="true" onclick="setTheme('dark')">dark</button>
+        <button class="theme-btn" id="btn-light" aria-pressed="false" onclick="setTheme('light')">light</button>
+      </div>
+    </div>
+
+    <div class="ascii">
+ __   _____ ___ ___ ___  _____ ___   ___  _    ___
+ \ \ / / __| _ \_ _|   \|_   _/ _ \ / _ \| |  / __|
+  \ V /| _||   /| || |) | | || (_) | (_) | |__\__ \
+   \_/ |___|_|_\___|___/  |_| \___/ \___/|____|___/</div>
+    <div class="tagline">
+      <span>TypeScript-native DMN tooling</span> — open source, MIT licensed
+    </div>
+    <div class="prompt">
+      <span class="prompt-sign">~</span>
+      <span>npm install @veridtools/dmn-diff</span>
+      <span class="cursor"></span>
+    </div>
+  </header>
+
+  <!-- Packages -->
+  <section class="section">
+    <div class="section-header">packages</div>
+    <div class="packages">
+
+      <a class="pkg" href="https://github.com/veridtools/dmn-fixtures" target="_blank" rel="noopener">
+        <div class="pkg-status"></div>
+        <div>
+          <div class="pkg-name"><span class="scope">@veridtools/</span>dmn-fixtures</div>
+          <div class="pkg-desc">Test fixtures for DMN tooling — 36 groups, ~316 files, full DMN 1.0–1.5 coverage</div>
+        </div>
+        <div class="pkg-links">
+          <span class="badge gh">GitHub ↗</span>
+          <span class="badge npm">npm ↗</span>
+        </div>
+      </a>
+
+      <a class="pkg" href="https://github.com/veridtools/dmn-diff" target="_blank" rel="noopener">
+        <div class="pkg-status"></div>
+        <div>
+          <div class="pkg-name"><span class="scope">@veridtools/</span>dmn-diff</div>
+          <div class="pkg-desc">Semantic diff for DMN files — ID-based identity, severity classification (breaking / non-breaking / cosmetic), four output formats, CI/CD-native exit codes</div>
+        </div>
+        <div class="pkg-links">
+          <span class="badge gh">GitHub ↗</span>
+          <span class="badge npm">npm ↗</span>
+        </div>
+      </a>
+
+      <a class="pkg" href="https://github.com/veridtools/dmn-diff-highlight" target="_blank" rel="noopener">
+        <div class="pkg-status"></div>
+        <div>
+          <div class="pkg-name"><span class="scope">@veridtools/</span>dmn-diff-highlight</div>
+          <div class="pkg-desc">Visual highlighting for DMN diffs — plain JS and React exports, composable theme system</div>
+        </div>
+        <div class="pkg-links">
+          <span class="badge gh">GitHub ↗</span>
+          <span class="badge npm">npm ↗</span>
+        </div>
+      </a>
+
+      <div class="pkg" style="cursor: default;">
+        <div class="pkg-status wip"></div>
+        <div>
+          <div class="pkg-name" style="color: var(--muted);">parsers · runners · linters · editors</div>
+          <div class="pkg-desc">More TypeScript-native DMN tooling on the way — watch individual repos for release notifications</div>
+        </div>
+        <div class="pkg-links">
+          <span class="badge soon">coming soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What is DMN -->
+  <section class="section">
+    <div class="section-header">what is DMN?</div>
+    <p class="blurb">
+      DMN (Decision Model and Notation) is an open standard from the
+      <a href="https://www.omg.org/dmn/" target="_blank" rel="noopener">Object Management Group</a>
+      for modeling business decisions. It's executable, vendor-neutral, and designed so business
+      analysts and engineers can work on the same artifact.<br><br>
+      If you're building anything with non-trivial business rules — credit scoring, eligibility
+      checks, pricing logic, compliance rules — DMN is probably a better fit than your current
+      approach.
+    </p>
+  </section>
+
+  <!-- Design principles -->
+  <section class="section">
+    <div class="section-header">design principles</div>
+    <div class="principles">
+      <div class="principle"><strong>TypeScript-native</strong> — runs in Node.js and the browser, no JVM required</div>
+      <div class="principle"><strong>Standards-compliant</strong> — aligned with the OMG DMN spec, tested against the official TCK</div>
+      <div class="principle"><strong>Small, focused packages</strong> — each does one thing well and composes with the rest</div>
+      <div class="principle"><strong>Minimal dependencies</strong> — understand exactly what you're shipping</div>
+      <div class="principle"><strong>MIT licensed</strong> — use freely in commercial and open source projects</div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section">
+    <div class="section-header">community</div>
+    <div class="community-links">
+      <a class="clink" href="https://github.com/veridtools" target="_blank" rel="noopener">
+        <span class="icon">⌥</span>GitHub org
+      </a>
+      <a class="clink" href="https://github.com/orgs/veridtools/discussions" target="_blank" rel="noopener">
+        <span class="icon">⌥</span>Discussions
+      </a>
+      <a class="clink" href="https://www.npmjs.com/org/veridtools" target="_blank" rel="noopener">
+        <span class="icon">⌥</span>npm registry
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2025 Veridtools — MIT License</span>
+    <span>Built with no dependencies · <a href="https://github.com/veridtools/veridtools.github.io">source</a></span>
+  </footer>
+
+</div>
+
+<script>
+  function setTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("vt-theme", theme);
+    document.getElementById("btn-dark").setAttribute("aria-pressed", theme === "dark");
+    document.getElementById("btn-light").setAttribute("aria-pressed", theme === "light");
+  }
+
+  (function syncButtons() {
+    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    document.getElementById("btn-dark").setAttribute("aria-pressed", current === "dark");
+    document.getElementById("btn-light").setAttribute("aria-pressed", current === "light");
+  })();
+</script>
+</body>
+</html>
