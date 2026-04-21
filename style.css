@@ -63,7 +63,7 @@ a:hover { color: var(--text); text-decoration: underline; }
 }
 
 .banner::before {
-  content: "verid.tools";
+  content: "docs.verid.tools";
   position: absolute;
   top: -0.55rem;
   left: 1.5rem;
